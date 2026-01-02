@@ -16,87 +16,59 @@
 <!-- APPS -->
 <section class="container">
 
-  <!-- KINGTV -->
+  <!-- KING TV -->
   <div class="app-card">
-    <img src="logo1.png" alt="King TV">
+    <img src="logo1.png">
     <h2>King TV</h2>
     <p>Live TV, Movies & Sports</p>
 
-    <a href="https://cutt.ly/king200" class="btn" target="_blank">
-      ⬇ Download App
-    </a>
+    <a href="https://cutt.ly/king200" class="btn" target="_blank">⬇ Download App</a>
+    <button class="btn package-btn" onclick="openPackage('KINGTV')">📦 View Packages</button>
 
-    <button class="btn package-btn" onclick="openPackage('KINGTV')">
-      📦 View Packages
-    </button>
-
-    <a href="https://t.me/+gabhQO4OjT1lMDY1"
-       class="btn outline"
-       target="_blank">
-       📞 King TV Support Group
+    <a href="https://t.me/+gabhQO4OjT1lMDY1" class="btn outline" target="_blank">
+      📞 King TV Support Group
     </a>
   </div>
 
   <!-- PANDAFLIX -->
   <div class="app-card">
-    <img src="logo2.png" alt="PandaFlix">
+    <img src="logo2.png">
     <h2>PandaFlix</h2>
     <p>OTT PREMIUM IPTV Experience</p>
 
-    <a href="https://link2u.cc/tvtech" class="btn" target="_blank">
-      ⬇ Download App
-    </a>
+    <a href="https://link2u.cc/tvtech" class="btn" target="_blank">⬇ Download App</a>
+    <button class="btn package-btn" onclick="openPackage('PANDAFLIX')">📦 View Packages</button>
 
-    <button class="btn package-btn" onclick="openPackage('PANDAFLIX')">
-      📦 View Packages
-    </button>
-
-    <a href="https://chat.whatsapp.com/CKBFhfqOBmq82v73gr4A6F"
-       class="btn outline"
-       target="_blank">
-       📞 PandaFlix Support Group
+    <a href="https://chat.whatsapp.com/CKBFhfqOBmq82v73gr4A6F" class="btn outline" target="_blank">
+      📞 PandaFlix Support Group
     </a>
   </div>
 
-  <!-- MYIPTV4K -->
+  <!-- MY IPTV 4K -->
   <div class="app-card">
-    <img src="logo3.png" alt="MY IPTV 4K">
+    <img src="logo3.png">
     <h2>MY IPTV 4K</h2>
     <p>4K Live Channels & Sports</p>
 
-    <a href="https://myiptv4k.my/download" class="btn" target="_blank">
-      ⬇ Download App
-    </a>
+    <a href="https://myiptv4k.my/download" class="btn" target="_blank">⬇ Download App</a>
+    <button class="btn package-btn" onclick="openPackage('MYIPTV4K')">📦 View Packages</button>
 
-    <button class="btn package-btn" onclick="openPackage('MYIPTV4K')">
-      📦 View Packages
-    </button>
-
-    <a href="https://t.me/+w4xaeKJIzMgxNGFl"
-       class="btn outline"
-       target="_blank">
-       📞 MY IPTV 4K Support Group
+    <a href="https://t.me/+w4xaeKJIzMgxNGFl" class="btn outline" target="_blank">
+      📞 MY IPTV 4K Support Group
     </a>
   </div>
 
-  <!-- TVTECH PRO -->
+  <!-- TV TECH PRO -->
   <div class="app-card">
-    <img src="logo4.png" alt="TV Tech Pro">
+    <img src="logo4.png">
     <h2>TV Tech Pro</h2>
     <p>OTT IPTV PREMIUM Experience</p>
 
-    <a href="https://link2u.cc/tvtech" class="btn" target="_blank">
-      ⬇ Download App
-    </a>
+    <a href="https://link2u.cc/tvtech" class="btn" target="_blank">⬇ Download App</a>
+    <button class="btn package-btn" onclick="openPackage('TVTECHPRO')">📦 View Packages</button>
 
-    <button class="btn package-btn" onclick="openPackage('TVTECHPRO')">
-      📦 View Packages
-    </button>
-
-    <a href="https://chat.whatsapp.com/Js2pnIdeAMzIETdRlnE6BR"
-       class="btn outline"
-       target="_blank">
-       📞 TV Tech Pro Support Group
+    <a href="https://chat.whatsapp.com/Js2pnIdeAMzIETdRlnE6BR" class="btn outline" target="_blank">
+      📞 TV Tech Pro Support Group
     </a>
   </div>
 
@@ -105,25 +77,15 @@
 <!-- PAYMENT -->
 <section class="payment">
   <h2>💳 Payment Method</h2>
-
-  <a href="https://wa.me/601159635600" class="btn buy-btn">
-    Online Payment (WhatsApp)
-  </a>
-
-  <button class="btn buy-btn" onclick="openQR()">📱 QR Pay</button>
+  <a href="https://wa.me/601159635600" class="btn" target="_blank">💬 Online Payment (WhatsApp)</a>
+  <button class="btn" onclick="openQR()">📱 QR Pay</button>
 </section>
 
 <!-- HELP -->
 <section class="help">
   <h2>Need Help?</h2>
-
-  <a href="https://wa.me/" class="help-btn whatsapp">
-    📞 WhatsApp Admin
-  </a>
-
-  <a href="https://t.me/yourtelegram" class="help-btn telegram">
-    💬 Telegram Support
-  </a>
+  <a href="https://wa.me/601159635600" class="help-btn whatsapp" target="_blank">📞 WhatsApp Admin</a>
+  <a href="https://t.me/yourtelegram" class="help-btn telegram" target="_blank">💬 Telegram Support</a>
 </section>
 
 <footer>© 2026 AZ Empire Shop — All Rights Reserved</footer>
@@ -141,7 +103,7 @@
 <div class="modal" id="qrModal">
   <div class="modal-box">
     <h2>📲 Scan QR to Pay</h2>
-    <img src="QRpay.jpg" class="qr-img no-save">
+    <img src="QRpay.jpg" class="qr-img">
     <button class="btn outline" onclick="closeQR()">Done</button>
   </div>
 </div>
@@ -179,10 +141,8 @@ const prices = {
 function openPackage(app) {
   document.getElementById("packageModal").style.display = "flex";
   document.getElementById("appTitle").innerText = app + " Packages";
-
   const list = document.getElementById("priceList");
   list.innerHTML = "";
-
   prices[app].forEach(pkg => {
     const li = document.createElement("li");
     li.innerHTML = `${pkg.name} — <strong>${pkg.price}</strong>`;
@@ -205,7 +165,3 @@ function closeQR() {
 
 </body>
 </html>
-
-
-
-
