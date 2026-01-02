@@ -141,8 +141,19 @@ const prices = {
 function openPackage(app) {
   document.getElementById("packageModal").style.display = "flex";
   document.getElementById("appTitle").innerText = app + " Packages";
+  
   const list = document.getElementById("priceList");
-  list.innerHTML = "";
+  list.innerHTML = "";prices[app].forEach(pkg => {
+    const msg = `Hi, I paid ${pkg.price} for ${pkg.name} ${app}`;
+    const wa = `https://wa.me/601159635600?text=${encodeURIComponent(msg)}`;
+
+    const li = document.createElement("li");
+    li.innerHTML = `
+      ${pkg.name} — <strong>${pkg.price}</strong><br>
+      <a href="${wa}" class="btn buy-btn">📲 I Paid – WhatsApp</a>
+    `;
+    list.appendChild(li);
+  
   prices[app].forEach(pkg => {
     const li = document.createElement("li");
     li.innerHTML = `${pkg.name} — <strong>${pkg.price}</strong>`;
@@ -165,3 +176,4 @@ function closeQR() {
 
 </body>
 </html>
+
