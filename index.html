@@ -16,7 +16,7 @@
 <!-- APPS -->
 <section class="container">
 
-  <!-- KINGTV -->
+  <!-- KING TV -->
   <div class="app-card">
     <img src="logo1.png">
     <h2>King TV</h2>
@@ -47,7 +47,7 @@
   <!-- MYIPTV4K -->
   <div class="app-card">
     <img src="logo3.png">
-    <h2>MY IPTV 4K</h2>
+    <h2>MYIPTV4K</h2>
     <p>Live TV, Movies & Sports</p>
 
     <a href="https://myiptv4k.my/download" class="btn" target="_blank">⬇ Download App</a>
@@ -61,7 +61,7 @@
   <!-- TVTECH PRO -->
   <div class="app-card">
     <img src="logo4.png">
-    <h2>TV Tech Pro</h2>
+    <h2>TVTech Pro</h2>
     <p>OTT IPTV PREMIUM</p>
 
     <a href="https://link2u.cc/tvtech" class="btn" target="_blank">⬇ Download App</a>
@@ -141,19 +141,8 @@ const prices = {
 function openPackage(app) {
   document.getElementById("packageModal").style.display = "flex";
   document.getElementById("appTitle").innerText = app + " Packages";
-  
   const list = document.getElementById("priceList");
-  list.innerHTML = "";prices[app].forEach(pkg => {
-    const msg = `Hi, I paid ${pkg.price} for ${pkg.name} ${app}`;
-    const wa = `https://wa.me/601159635600?text=${encodeURIComponent(msg)}`;
-
-    const li = document.createElement("li");
-    li.innerHTML = `
-      ${pkg.name} — <strong>${pkg.price}</strong><br>
-      <a href="${wa}" class="btn buy-btn">📲 I Paid – WhatsApp</a>
-    `;
-    list.appendChild(li);
-  
+  list.innerHTML = "";
   prices[app].forEach(pkg => {
     const li = document.createElement("li");
     li.innerHTML = `${pkg.name} — <strong>${pkg.price}</strong>`;
@@ -176,4 +165,7 @@ function closeQR() {
 
 </body>
 </html>
+
+
+
 
