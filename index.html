@@ -1,50 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AZ Empire Shop | IPTV Apps</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>AZ Empire Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 🔥 Banner Section -->
-    <section class="banner">
-        <img src="banner.png" alt="AZ Empire Shop IPTV Banner">
-    </section>
+<!-- 🔥 BANNER -->
+<section class="banner">
+  <img src="banner.png" alt="AZ Empire Shop Banner">
+</section>
 
-    <header>
-        <h1>Available IPTV Apps</h1>
-        <p>Select an app to continue</p>
-    </header>
+<!-- 📺 APPS -->
+<section class="container">
 
-    <main class="app-grid">
+  <!-- KING TV -->
+  <div class="app-card">
+    <img src="logo1.png" alt="King TV">
+    <h2>King TV</h2>
+    <p>Live TV, Movies, Sports & More</p>
 
-        <a href="https://your-link-here.com/kingtv" class="app-card">
-            <img src="logo1.png" alt="King TV">
-            <span>King TV</span>
-        </a>
+    <a href="#" class="btn">Download Link 1</a>
+    <a href="#" class="btn outline">Download Link 2</a>
 
-        <a href="https://your-link-here.com/pandaflix" class="app-card">
-            <img src="logo2.png" alt="PandaFlix">
-            <span>PandaFlix</span>
-        </a>
+    <button class="btn package-btn" onclick="openPackage('KINGTV')">
+      📦 View Packages
+    </button>
+  </div>
 
-        <a href="https://your-link-here.com/myiptv4k" class="app-card">
-            <img src="logo3.png" alt="MY IPTV 4K">
-            <span>MY IPTV 4K</span>
-        </a>
+  <!-- PANDAFLIX -->
+  <div class="app-card">
+    <img src="logo2.png" alt="PandaFlix">
+    <h2>PandaFlix</h2>
+    <p>Live TV, Movies & Series</p>
 
-        <a href="https://your-link-here.com/tvtechpro" class="app-card">
-            <img src="logo4.png" alt="TV Tech Pro">
-            <span>TV Tech Pro</span>
-        </a>
+    <a href="#" class="btn">Download Link 1</a>
+    <a href="#" class="btn outline">Download Link 2</a>
 
-    </main>
+    <button class="btn package-btn" onclick="openPackage('PANDAFLIX')">
+      📦 View Packages
+    </button>
+  </div>
 
-    <footer>
-        <p>© 2026 AZ Empire Shop</p>
-    </footer>
+  <!-- MY IPTV 4K -->
+  <div class="app-card">
+    <img src="logo3.png" alt="MY IPTV 4K">
+    <h2>MY IPTV 4K</h2>
+    <p>4K Channels, Movies & Sports</p>
+
+    <a href="#" class="btn">Download Link 1</a>
+    <a href="#" class="btn outline">Download Link 2</a>
+
+    <button class="btn package-btn" onclick="openPackage('MYIPTV4K')">
+      📦 View Packages
+    </button>
+  </div>
+
+  <!-- TV TECH PRO -->
+  <div class="app-card">
+    <img src="logo4.png" alt="TV Tech Pro">
+    <h2>TV Tech Pro</h2>
+    <p>Premium Live Channels</p>
+
+    <a href="#" class="btn">Download Link 1</a>
+    <a href="#" class="btn outline">Download Link 2</a>
+
+    <button class="btn package-btn" onclick="openPackage('TVTECHPRO')">
+      📦 View Packages
+    </button>
+  </div>
+
+</section>
+
+<!-- 💳 PAYMENT -->
+<section class="payment">
+  <h2>Payment Method</h2>
+  <a href="#" class="btn buy-btn">💳 Online Payment</a>
+  <button class="btn buy-btn" onclick="openQR()">📱 QR Pay</button>
+</section>
+
+<!-- 📞 HELP -->
+<section class="help">
+  <h2>Need Help?</h2>
+  <a href="https://wa.me/601159635600" class="help-btn whatsapp">📞 WhatsApp</a>
+  <a href="#" class="help-btn telegram">💬 Telegram</a>
+</section>
+
+<footer>© 2026 AZ Empire Shop — All Rights Reserved</footer>
+
+<!-- 📦 PACKAGE MODAL -->
+<div class="modal" id="packageModal">
+  <div class="modal-box">
+    <h2 id="appTitle"></h2>
+    <ul id="priceList"></ul>
+    <button class="btn outline" onclick="closePackage()">Close</button>
+  </div>
+</div>
+
+<!-- 📱 QR MODAL -->
+<div class="modal" id="qrModal">
+  <div class="modal-box">
+    <h2>📲 Scan QR to Pay</h2>
+    <img src="QRpay.jpg" class="qr-img">
+    <button class="btn outline" onclick="closeQR()">Done</button>
+  </div>
+</div>
+
+<!-- ⚙️ SCRIPT -->
+<script>
+const prices = {
+  KINGTV: [
+    { name: "1 Month", price: "RM15" },
+    { name: "6 Months", price: "RM70" },
+    { name: "1 Year", price: "RM110" }
+  ],
+  PANDAFLIX: [
+    { name: "1 Month", price: "RM14" },
+    { name: "6 Months", price: "RM65" }
+  ],
+  MYIPTV4K: [
+    { name: "1 Month", price: "RM16" },
+    { name: "1 Year", price: "RM120" }
+  ],
+  TVTECHPRO: [
+    { name: "3 Months", price: "RM40" },
+    { name: "1 Year", price: "RM115" }
+  ]
+};
+
+function openPackage(app) {
+  document.getElementById("packageModal").style.display = "flex";
+  document.getElementById("appTitle").innerText = app + " Packages";
+
+  const list = document.getElementById("priceList");
+  list.innerHTML = "";
+
+  prices[app].forEach(pkg => {
+    const li = document.createElement("li");
+    li.innerHTML = `${pkg.name} — <strong>${pkg.price}</strong>`;
+    list.appendChild(li);
+  });
+}
+
+function closePackage() {
+  document.getElementById("packageModal").style.display = "none";
+}
+
+function openQR() {
+  document.getElementById("qrModal").style.display = "flex";
+}
+
+function closeQR() {
+  document.getElementById("qrModal").style.display = "none";
+}
+</script>
 
 </body>
 </html>
