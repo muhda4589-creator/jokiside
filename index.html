@@ -8,103 +8,53 @@
 </head>
 <body>
 
-<!-- BANNER -->
 <section class="banner">
   <img src="banner2.png" alt="AZ Empire Shop Banner">
 </section>
 
-<!-- APPS -->
 <section class="container">
 
-  <!-- KINGTV -->
   <div class="app-card">
-    <img src="logo1.png">
+    <div class="logo-box"><img src="logo1.png"></div>
     <h2>King TV</h2>
     <p>Live TV, Movies & Sports</p>
-
     <a href="https://cutt.ly/king200" class="btn" target="_blank">⬇ Download App</a>
     <button class="btn" onclick="openPackage('KINGTV')">📦 View Packages</button>
-
-    <a href="https://t.me/+gabhQO4OjT1lMDY1" class="btn outline" target="_blank">
-      📞 King TV Support
-    </a>
   </div>
 
-  <!-- PANDAFLIX -->
   <div class="app-card">
-    <img src="logo2.png">
+    <div class="logo-box"><img src="logo2.png"></div>
     <h2>PandaFlix</h2>
     <p>OTT PREMIUM IPTV</p>
-
     <a href="https://link2u.cc/tvtech" class="btn" target="_blank">⬇ Download App</a>
     <button class="btn" onclick="openPackage('PANDAFLIX')">📦 View Packages</button>
-
-    <a href="https://chat.whatsapp.com/CKBFhfqOBmq82v73gr4A6F" class="btn outline" target="_blank">
-      📞 PandaFlix Support
-    </a>
   </div>
 
-  <!-- MYIPTV4K -->
   <div class="app-card">
-    <img src="logo3.png">
+    <div class="logo-box"><img src="logo3.png"></div>
     <h2>MY IPTV 4K</h2>
     <p>Live TV, Movies & Sports</p>
-
     <a href="https://myiptv4k.my/download" class="btn" target="_blank">⬇ Download App</a>
     <button class="btn" onclick="openPackage('MYIPTV4K')">📦 View Packages</button>
-
-    <a href="https://t.me/+w4xaeKJIzMgxNGFl" class="btn outline" target="_blank">
-      📞 MYIPTV4K Support
-    </a>
   </div>
 
-  <!-- TVTECH PRO -->
   <div class="app-card">
-    <img src="logo4.png">
+    <div class="logo-box"><img src="logo4.png"></div>
     <h2>TV Tech Pro</h2>
     <p>OTT IPTV PREMIUM</p>
-
     <a href="https://link2u.cc/tvtech" class="btn" target="_blank">⬇ Download App</a>
     <button class="btn" onclick="openPackage('TVTECHPRO')">📦 View Packages</button>
-
-    <a href="https://chat.whatsapp.com/Js2pnIdeAMzIETdRlnE6BR" class="btn outline" target="_blank">
-      📞 TVTech Pro Support
-    </a>
   </div>
 
-</section>
-
-<!-- PAYMENT -->
-<section class="payment">
-  <h2>💳 Payment Method</h2>
-  <a href="https://wa.me/60123456789" class="btn" target="_blank">💬 Online Payment (WhatsApp)</a>
-  <button class="btn" onclick="openQR()">📱 QR Pay</button>
-</section>
-
-<!-- HELP -->
-<section class="help">
-  <h2>Need Help?</h2>
-  <a href="https://wa.me/60123456789" class="help-btn whatsapp" target="_blank">📞 WhatsApp Admin</a>
-  <a href="https://t.me/yourtelegram" class="help-btn telegram" target="_blank">💬 Telegram Support</a>
 </section>
 
 <footer>© 2026 AZ Empire Shop — All Rights Reserved</footer>
 
-<!-- PACKAGE MODAL -->
 <div class="modal" id="packageModal">
   <div class="modal-box">
     <h2 id="appTitle"></h2>
     <ul id="priceList"></ul>
     <button class="btn outline" onclick="closePackage()">Close</button>
-  </div>
-</div>
-
-<!-- QR MODAL -->
-<div class="modal" id="qrModal">
-  <div class="modal-box">
-    <h2>📲 Scan QR to Pay</h2>
-    <img src="QRpay.jpg" class="qr-img">
-    <button class="btn outline" onclick="closeQR()">Done</button>
   </div>
 </div>
 
@@ -149,8 +99,9 @@ function openPackage(app) {
   prices[app].forEach(pkg => {
     const li = document.createElement("li");
     li.innerHTML = `
-      <strong>${pkg.name}</strong><br>${pkg.price}
-      <a class="btn" style="margin-top:10px"
+      <strong>${pkg.name}</strong><br>
+      ${pkg.price}
+      <a class="btn"
         href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
           `Hi Admin, I want to buy ${app}\nPackage: ${pkg.name}\nPrice: ${pkg.price}`
         )}"
@@ -162,12 +113,6 @@ function openPackage(app) {
 
 function closePackage() {
   document.getElementById("packageModal").style.display = "none";
-}
-function openQR() {
-  document.getElementById("qrModal").style.display = "flex";
-}
-function closeQR() {
-  document.getElementById("qrModal").style.display = "none";
 }
 </script>
 
