@@ -8,48 +8,89 @@
 </head>
 <body>
 
+<!-- BANNER -->
 <section class="banner">
   <img src="banner2.png" alt="AZ Empire Shop Banner">
 </section>
 
+<!-- APPS -->
 <section class="container">
 
+  <!-- KINGTV -->
   <div class="app-card">
-    <div class="logo-box"><img src="logo1.png"></div>
+    <img src="logo1.png">
     <h2>King TV</h2>
     <p>Live TV, Movies & Sports</p>
+
     <a href="https://cutt.ly/king200" class="btn" target="_blank">⬇ Download App</a>
-    <button class="btn" onclick="openPackage('KINGTV')">📦 View Packages</button>
+    <button class="btn package-btn" onclick="openPackage('KINGTV')">📦 View Packages</button>
+
+    <a href="https://t.me/+gabhQO4OjT1lMDY1" class="btn outline" target="_blank">
+      📞 KingTV Support Group
+    </a>
   </div>
 
+  <!-- PANDAFLIX -->
   <div class="app-card">
-    <div class="logo-box"><img src="logo2.png"></div>
+    <img src="logo2.png">
     <h2>PandaFlix</h2>
     <p>OTT PREMIUM IPTV</p>
+
     <a href="https://link2u.cc/tvtech" class="btn" target="_blank">⬇ Download App</a>
-    <button class="btn" onclick="openPackage('PANDAFLIX')">📦 View Packages</button>
+    <button class="btn package-btn" onclick="openPackage('PANDAFLIX')">📦 View Packages</button>
+
+    <a href="https://chat.whatsapp.com/CKBFhfqOBmq82v73gr4A6F" class="btn outline" target="_blank">
+      📞 PandaFlix Support Group
+    </a>
   </div>
 
+  <!-- MYIPTV4K -->
   <div class="app-card">
-    <div class="logo-box"><img src="logo3.png"></div>
+    <img src="logo3.png">
     <h2>MY IPTV 4K</h2>
     <p>Live TV, Movies & Sports</p>
+
     <a href="https://myiptv4k.my/download" class="btn" target="_blank">⬇ Download App</a>
-    <button class="btn" onclick="openPackage('MYIPTV4K')">📦 View Packages</button>
+    <button class="btn package-btn" onclick="openPackage('MYIPTV4K')">📦 View Packages</button>
+
+    <a href="https://t.me/+w4xaeKJIzMgxNGFl" class="btn outline" target="_blank">
+      📞 MYIPTV4K Support Group
+    </a>
   </div>
 
+  <!-- TVTECH PRO -->
   <div class="app-card">
-    <div class="logo-box"><img src="logo4.png"></div>
+    <img src="logo4.png">
     <h2>TV Tech Pro</h2>
     <p>OTT IPTV PREMIUM</p>
+
     <a href="https://link2u.cc/tvtech" class="btn" target="_blank">⬇ Download App</a>
-    <button class="btn" onclick="openPackage('TVTECHPRO')">📦 View Packages</button>
+    <button class="btn package-btn" onclick="openPackage('TVTECHPRO')">📦 View Packages</button>
+
+    <a href="https://chat.whatsapp.com/Js2pnIdeAMzIETdRlnE6BR" class="btn outline" target="_blank">
+      📞 TVTech Pro Support Group
+    </a>
   </div>
 
 </section>
 
+<!-- PAYMENT -->
+<section class="payment">
+  <h2>💳 Payment Method</h2>
+  <a href="https://wa.me/601" class="btn" target="_blank">💬 Online Payment (WhatsApp)</a>
+  <button class="btn" onclick="openQR()">📱 QR Pay</button>
+</section>
+
+<!-- HELP -->
+<section class="help">
+  <h2>Need Help?</h2>
+  <a href="https://wa.me/6011" class="help-btn whatsapp" target="_blank">📞 WhatsApp Admin</a>
+  <a href="https://t.me/yourtelegram" class="help-btn telegram" target="_blank">💬 Telegram Support</a>
+</section>
+
 <footer>© 2026 AZ Empire Shop — All Rights Reserved</footer>
 
+<!-- PACKAGE MODAL -->
 <div class="modal" id="packageModal">
   <div class="modal-box">
     <h2 id="appTitle"></h2>
@@ -58,9 +99,16 @@
   </div>
 </div>
 
-<script>
-const WHATSAPP_NUMBER = "60123456789";
+<!-- QR MODAL -->
+<div class="modal" id="qrModal">
+  <div class="modal-box">
+    <h2>📲 Scan QR to Pay</h2>
+    <img src="QRpay.jpg" class="qr-img">
+    <button class="btn outline" onclick="closeQR()">Done</button>
+  </div>
+</div>
 
+<script>
 const prices = {
   KINGTV: [
     { name: "1 Month", price: "RM15" },
@@ -70,7 +118,7 @@ const prices = {
     { name: "4 Year", price: "RM300" }
   ],
   PANDAFLIX: [
-    { name: "1 Month", price: "RM10" },
+    { name: "1 Months", price: "RM10" },
     { name: "3 Months", price: "RM28" },
     { name: "6 Months", price: "RM55" },
     { name: "1 Year", price: "RM100" }
@@ -95,24 +143,23 @@ function openPackage(app) {
   document.getElementById("appTitle").innerText = app + " Packages";
   const list = document.getElementById("priceList");
   list.innerHTML = "";
-
   prices[app].forEach(pkg => {
     const li = document.createElement("li");
-    li.innerHTML = `
-      <strong>${pkg.name}</strong><br>
-      ${pkg.price}
-      <a class="btn"
-        href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-          `Hi Admin, I want to buy ${app}\nPackage: ${pkg.name}\nPrice: ${pkg.price}`
-        )}"
-        target="_blank">🛒 Buy on WhatsApp</a>
-    `;
+    li.innerHTML = `${pkg.name} — <strong>${pkg.price}</strong>`;
     list.appendChild(li);
   });
 }
 
 function closePackage() {
   document.getElementById("packageModal").style.display = "none";
+}
+
+function openQR() {
+  document.getElementById("qrModal").style.display = "flex";
+}
+
+function closeQR() {
+  document.getElementById("qrModal").style.display = "none";
 }
 </script>
 
