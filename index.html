@@ -2,18 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AZ Empire Shop | IPTV</title>
+  <title>AZ Empire Shop | IPTV & Android Box</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ================= BANNER ================= -->
+<!-- STICKY PROMO BANNER -->
+<a href="https://wa.me/60129876368" class="promo-banner">
+  🔥 PROMO DEAL 🔥 Free Setup • Stable IPTV • Android Box • Click to WhatsApp
+</a>
+
+<!-- BANNER -->
 <section class="banner">
   <img src="banner2.png" alt="AZ Empire Shop Banner">
 </section>
 
-<!-- ================= APPS ================= -->
+<!-- APPS -->
 <section class="container">
 
   <!-- KING TV -->
@@ -25,7 +30,7 @@
     <a href="https://cutt.ly/king200" class="btn" target="_blank">⬇ Download App</a>
     <button class="btn" onclick="openPackage('KINGTV')">📦 View Packages</button>
     <a href="https://t.me/+gabhQO4OjT1lMDY1" class="btn outline" target="_blank">
-      📞 Support Group
+      📞 King TV Support
     </a>
   </div>
 
@@ -38,7 +43,7 @@
     <a href="https://link2u.cc/tvtech" class="btn" target="_blank">⬇ Download App</a>
     <button class="btn" onclick="openPackage('PANDAFLIX')">📦 View Packages</button>
     <a href="https://chat.whatsapp.com/CKBFhfqOBmq82v73gr4A6F" class="btn outline" target="_blank">
-      📞 Support Group
+      📞 PandaFlix Support
     </a>
   </div>
 
@@ -51,7 +56,7 @@
     <a href="https://bit.ly/myiptv_21" class="btn" target="_blank">⬇ Download App</a>
     <button class="btn" onclick="openPackage('MYIPTV4K')">📦 View Packages</button>
     <a href="https://t.me/+w4xaeKJIzMgxNGFl" class="btn outline" target="_blank">
-      📞 Support Group
+      📞 MYIPTV4K Support
     </a>
   </div>
 
@@ -64,13 +69,13 @@
     <a href="https://link2u.cc/tvtech" class="btn" target="_blank">⬇ Download App</a>
     <button class="btn" onclick="openPackage('TVTECHPRO')">📦 View Packages</button>
     <a href="https://chat.whatsapp.com/Js2pnIdeAMzIETdRlnE6BR" class="btn outline" target="_blank">
-      📞 Support Group
+      📞 TVTech Pro Support
     </a>
   </div>
 
 </section>
 
-<!-- ================= PAYMENT ================= -->
+<!-- PAYMENT -->
 <section class="payment">
   <h2>💳 Payment Method</h2>
   <a href="https://wa.me/60129876368" class="btn" target="_blank">
@@ -79,35 +84,33 @@
   <button class="btn" onclick="openQR()">📱 QR Pay</button>
 </section>
 
-<!-- ================= RESELLER ================= -->
+<!-- RESELLER -->
 <section class="reseller">
   <h2>🤝 Become a Reseller</h2>
-  <p>Earn monthly income selling IPTV & Android Box</p>
-  <a href="https://wa.me/60129876368" class="btn" target="_blank">
-    💼 WhatsApp to Become Reseller
+  <p>Earn income by selling IPTV & Android Box with us</p>
+  <a href="https://wa.me/60129876368?text=Hi%20I%20want%20to%20be%20a%20reseller"
+     class="btn" target="_blank">
+    💼 Become a Reseller (WhatsApp)
   </a>
 </section>
 
-<!-- ================= OPERATION HOURS ================= -->
+<!-- OPERATION HOURS -->
 <section class="hours">
   <h2>🕘 Operation Hours</h2>
   <p>Daily • 9:00 AM – 11:00 PM</p>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer>
   © 2026 AZ Empire Shop — All Rights Reserved
 </footer>
 
-<!-- ================= FLOATING WHATSAPP ================= -->
-<a href="https://wa.me/60129876368"
-   class="floating-whatsapp"
-   target="_blank"
-   aria-label="WhatsApp Help">
-   💬
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/60129876368" class="floating-whatsapp" title="Chat with us">
+  💬
 </a>
 
-<!-- ================= PACKAGE MODAL ================= -->
+<!-- PACKAGE MODAL -->
 <div class="modal" id="packageModal">
   <div class="modal-box">
     <h2 id="appTitle"></h2>
@@ -116,7 +119,7 @@
   </div>
 </div>
 
-<!-- ================= QR MODAL ================= -->
+<!-- QR MODAL -->
 <div class="modal" id="qrModal">
   <div class="modal-box">
     <h2>📲 Scan QR to Pay</h2>
@@ -125,7 +128,6 @@
   </div>
 </div>
 
-<!-- ================= SCRIPT ================= -->
 <script>
 const prices = {
   KINGTV: [
@@ -133,7 +135,7 @@ const prices = {
     { name: "3 Months", price: "RM38" },
     { name: "6 Months", price: "RM70" },
     { name: "1 Year", price: "RM110" },
-    { name: "4 Year", price: "RM300" }
+    { name: "4 Years", price: "RM300" }
   ],
   PANDAFLIX: [
     { name: "1 Month", price: "RM10" },
@@ -147,12 +149,12 @@ const prices = {
     { name: "1 Year", price: "RM270" }
   ],
   TVTECHPRO: [
-    { name: "1 Device 3 Months", price: "RM35" },
-    { name: "1 Device 6 Months", price: "RM60" },
-    { name: "1 Device 1 Year", price: "RM110" },
-    { name: "2 Device 3 Months", price: "RM55" },
-    { name: "2 Device 6 Months", price: "RM105" },
-    { name: "2 Device 1 Year", price: "RM200" }
+    { name: "1 Device • 3 Months", price: "RM35" },
+    { name: "1 Device • 6 Months", price: "RM60" },
+    { name: "1 Device • 1 Year", price: "RM110" },
+    { name: "2 Devices • 3 Months", price: "RM55" },
+    { name: "2 Devices • 6 Months", price: "RM105" },
+    { name: "2 Devices • 1 Year", price: "RM200" }
   ]
 };
 
