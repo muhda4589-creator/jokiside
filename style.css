@@ -10,7 +10,7 @@ body {
   color: #ffb3b3;
 }
 
-/* BANNER */
+/* ================= BANNER ================= */
 .banner {
   background: #000;
   box-shadow: 0 0 40px rgba(255,0,0,0.5);
@@ -23,7 +23,7 @@ body {
   margin: auto;
 }
 
-/* GRID */
+/* ================= GRID ================= */
 .container {
   max-width: 1100px;
   margin: auto;
@@ -33,7 +33,7 @@ body {
   gap: 30px;
 }
 
-/* CARD */
+/* ================= CARD ================= */
 .app-card {
   background: rgba(0,0,0,0.75);
   border-radius: 18px;
@@ -53,7 +53,7 @@ body {
   filter: drop-shadow(0 0 15px rgba(255,0,0,0.8));
 }
 
-/* BUTTONS */
+/* ================= BUTTONS ================= */
 .btn {
   display: block;
   width: 100%;
@@ -67,6 +67,10 @@ body {
   border: none;
   cursor: pointer;
   box-shadow: 0 0 25px rgba(255,0,0,0.8);
+  transition: 0.3s;
+}
+.btn:hover {
+  transform: scale(1.04);
 }
 
 .btn.outline {
@@ -75,7 +79,7 @@ body {
   color: #ff4d4d;
 }
 
-/* PAYMENT */
+/* ================= PAYMENT ================= */
 .payment {
   text-align: center;
   padding: 80px 20px;
@@ -87,7 +91,26 @@ body {
   font-size: 18px;
 }
 
-/* HELP */
+/* ================= RESELLER ================= */
+.reseller {
+  text-align: center;
+  padding: 70px 20px;
+  background: rgba(0,0,0,0.5);
+  border-top: 1px solid rgba(255,0,0,0.35);
+}
+.reseller h2 {
+  margin-bottom: 15px;
+}
+.reseller p {
+  margin-bottom: 25px;
+  color: #ff9999;
+}
+.reseller .btn {
+  max-width: 360px;
+  margin: auto;
+}
+
+/* ================= HELP ================= */
 .help {
   text-align: center;
   padding: 70px 20px;
@@ -103,11 +126,27 @@ body {
   font-weight: bold;
   color: #fff;
   text-decoration: none;
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
 }
 .help-btn.whatsapp { background: #25d366; }
-.help-btn.telegram { background: #0088cc; }
 
-/* FOOTER */
+/* ================= OPERATION HOURS ================= */
+.hours {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(0,0,0,0.6);
+  border-top: 1px solid rgba(255,0,0,0.35);
+}
+.hours h2 {
+  margin-bottom: 12px;
+}
+.hours p {
+  font-size: 18px;
+  color: #ffcccc;
+  letter-spacing: 1px;
+}
+
+/* ================= FOOTER ================= */
 footer {
   text-align: center;
   padding: 25px;
@@ -116,7 +155,7 @@ footer {
   border-top: 1px solid rgba(255,0,0,0.35);
 }
 
-/* MODAL */
+/* ================= MODAL ================= */
 .modal {
   display: none;
   position: fixed;
@@ -124,6 +163,7 @@ footer {
   background: rgba(0,0,0,0.85);
   justify-content: center;
   align-items: center;
+  z-index: 999;
 }
 .modal-box {
   background: #120000;
@@ -132,6 +172,7 @@ footer {
   width: 90%;
   max-width: 360px;
   text-align: center;
+  box-shadow: 0 0 35px rgba(255,0,0,0.6);
 }
 .modal-box ul {
   list-style: none;
