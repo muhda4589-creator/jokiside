@@ -1,159 +1,39 @@
-/* ============ RESET ============ */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: radial-gradient(circle at top, #1a0000, #000);
-  color: #ffd6d6;
-}
-
-/* ============ STICKY PROMO BANNER ============ */
-.promo-banner {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 12px;
-  text-align: center;
-  font-weight: bold;
-  background: linear-gradient(90deg, #ff0000, #b30000);
-  color: #fff;
-  z-index: 1000;
-  box-shadow: 0 0 25px rgba(255,0,0,0.9);
-}
-
-.banner {
-  margin-top: 50px;
-}
-
-/* ============ BANNER ============ */
-.banner img {
-  width: 100%;
-  max-height: 320px;
-  object-fit: cover;
-  display: block;
-}
-
-/* ============ GRID ============ */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 80px 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-/* ============ APP CARD ============ */
-.app-card {
-  background: rgba(0,0,0,0.85);
-  border-radius: 20px;
-  padding: 30px;
-  text-align: center;
-  border: 1px solid rgba(255,0,0,0.4);
-  box-shadow: 0 0 35px rgba(255,0,0,0.5);
-  transition: 0.3s;
-}
-
-.app-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 55px rgba(255,0,0,0.9);
-}
-
-.app-card img {
-  width: 110px;
-  margin-bottom: 15px;
-  filter: drop-shadow(0 0 15px rgba(255,0,0,0.9));
-}
-
-.app-card h2 {
-  color: #ff4d4d;
-  margin-bottom: 6px;
-}
-
-.app-card p {
-  font-size: 14px;
-  color: #ffb3b3;
-  margin-bottom: 20px;
-}
-
-/* ============ BUTTONS ============ */
-.btn {
-  display: block;
-  width: 100%;
-  padding: 14px;
-  margin: 10px 0;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  background: linear-gradient(135deg, #ff0000, #ff4d4d);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 0 25px rgba(255,0,0,0.9);
-  transition: 0.25s;
-}
-
-.btn:hover {
-  transform: scale(1.04);
-}
-
-.btn.outline {
-  background: transparent;
-  border: 1px solid #ff4d4d;
-  color: #ff4d4d;
-}
-
-/* ============ PAYMENT ============ */
-.payment {
-  text-align: center;
-  padding: 80px 20px;
-}
-
-/* ============ RESELLER (BLACK PREMIUM) ============ */
+/* ===== RESELLER (BLACK + PREMIUM) ===== */
 .reseller {
   text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(180deg, #050505, #000);
-  border-top: 1px solid rgba(255,0,0,0.25);
-  border-bottom: 1px solid rgba(255,0,0,0.25);
+  padding: 90px 20px;
+  background: radial-gradient(circle at top, #0a0a0a, #000);
+  border-top: 1px solid rgba(255,0,0,0.4);
+  border-bottom: 1px solid rgba(255,0,0,0.4);
+  box-shadow: inset 0 0 60px rgba(255,0,0,0.15);
 }
 
 .reseller h2 {
-  font-size: 26px;
-  margin-bottom: 12px;
+  font-size: 28px;
   color: #ff4d4d;
+  margin-bottom: 12px;
+  text-shadow: 0 0 15px rgba(255,0,0,0.7);
 }
 
 .reseller p {
-  margin: 15px auto 30px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 16px;
   color: #ffb3b3;
-  max-width: 520px;
   line-height: 1.6;
 }
 
-/* ============ OPERATION HOURS ============ */
-.hours {
-  text-align: center;
-  padding: 70px 20px;
-}
-
-.hours h2 {
-  color: #ff4d4d;
-  margin-bottom: 10px;
-}
-
-.hours p {
+/* Reseller Button */
+.reseller .btn {
+  max-width: 360px;
+  margin: auto;
   font-size: 18px;
-  font-weight: bold;
-  color: #ffb3b3;
+  padding: 16px;
+  background: linear-gradient(135deg, #ff0000, #b30000);
+  box-shadow: 0 0 35px rgba(255,0,0,0.9);
 }
 
-/* ============ FOOTER ============ */
-footer {
-  text-align: center;
-  padding: 25px;
-  font-size: 13px;
+.reseller .btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 55px rgba(255,0,0,1);
+}
