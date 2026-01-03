@@ -1,4 +1,146 @@
-/* ===== RESELLER (BLACK + PREMIUM) ===== */
+/* ============ RESET ============ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #1a0000, #000);
+  color: #ffb3b3;
+}
+
+/* ============ BANNER ============ */
+.banner {
+  background: #000;
+  box-shadow: 0 0 40px rgba(255,0,0,0.5);
+}
+
+.banner img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+/* ============ GRID ============ */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+/* ============ APP CARD ============ */
+.app-card {
+  background: rgba(0,0,0,0.75);
+  border-radius: 18px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(255,0,0,0.35);
+  box-shadow: 0 0 35px rgba(255,0,0,0.35);
+  transition: 0.3s;
+}
+
+.app-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 55px rgba(255,0,0,0.8);
+}
+
+.app-card img {
+  width: 110px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 15px rgba(255,0,0,0.8));
+}
+
+.app-card h2 {
+  color: #ff4d4d;
+  margin-bottom: 6px;
+}
+
+.app-card p {
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+/* ============ BUTTONS ============ */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  background: linear-gradient(135deg, #ff0000, #ff4d4d);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(255,0,0,0.8);
+}
+
+.btn:hover {
+  transform: scale(1.04);
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid #ff4d4d;
+  color: #ff4d4d;
+}
+
+/* ============ PAYMENT ============ */
+.payment {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.payment .btn {
+  max-width: 1100px;
+  margin: 18px auto;
+  height: 60px;
+  font-size: 18px;
+}
+
+/* ============ HELP ============ */
+.help {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.help h2 {
+  margin-bottom: 25px;
+  color: #ff4d4d;
+}
+
+.help-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  max-width: 360px;
+  margin: 15px auto;
+  border-radius: 40px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.help-btn.whatsapp {
+  background: #25d366;
+  box-shadow: 0 0 25px rgba(37,211,102,0.7);
+}
+
+.help-btn.telegram {
+  background: #0088cc;
+  box-shadow: 0 0 25px rgba(0,136,204,0.7);
+}
+
+/* ============ RESELLER (BLACK + PREMIUM) ============ */
 .reseller {
   text-align: center;
   padding: 90px 20px;
@@ -23,7 +165,6 @@
   line-height: 1.6;
 }
 
-/* Reseller Button */
 .reseller .btn {
   max-width: 360px;
   margin: auto;
@@ -33,7 +174,71 @@
   box-shadow: 0 0 35px rgba(255,0,0,0.9);
 }
 
-.reseller .btn:hover {
-  transform: scale(1.06);
-  box-shadow: 0 0 55px rgba(255,0,0,1);
+/* ============ OPERATION HOURS ============ */
+.hours {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.hours h2 {
+  color: #ff4d4d;
+  margin-bottom: 10px;
+}
+
+.hours p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffb3b3;
+}
+
+/* ============ FOOTER ============ */
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 13px;
+  color: #ff9999;
+  border-top: 1px solid rgba(255,0,0,0.35);
+}
+
+/* ============ MODAL ============ */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: #120000;
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+  border: 1px solid rgba(255,0,0,0.4);
+}
+
+.modal-box ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.modal-box li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.qr-img {
+  width: 220px;
+  margin: 15px 0;
+}
+
+/* ============ MOBILE ============ */
+@media (max-width: 600px) {
+  .banner img {
+    max-height: 180px;
+  }
 }
