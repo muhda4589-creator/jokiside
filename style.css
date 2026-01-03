@@ -11,7 +11,7 @@ body {
   color: #ffd6d6;
 }
 
-/* ============ STICKY PROMO ============ */
+/* ============ STICKY PROMO BANNER ============ */
 .promo-banner {
   position: fixed;
   top: 0;
@@ -49,7 +49,7 @@ body {
 
 /* ============ APP CARD ============ */
 .app-card {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.85);
   border-radius: 20px;
   padding: 30px;
   text-align: center;
@@ -94,6 +94,7 @@ body {
   border: none;
   cursor: pointer;
   box-shadow: 0 0 25px rgba(255,0,0,0.9);
+  transition: 0.25s;
 }
 
 .btn:hover {
@@ -112,21 +113,26 @@ body {
   padding: 80px 20px;
 }
 
-/* ============ RESELLER (DIFFERENT COLOR) ============ */
+/* ============ RESELLER (BLACK PREMIUM) ============ */
 .reseller {
   text-align: center;
   padding: 80px 20px;
-  background: radial-gradient(circle, rgba(255,215,0,0.15), transparent);
-  border-top: 1px solid rgba(255,215,0,0.4);
+  background: linear-gradient(180deg, #050505, #000);
+  border-top: 1px solid rgba(255,0,0,0.25);
+  border-bottom: 1px solid rgba(255,0,0,0.25);
 }
 
 .reseller h2 {
-  color: #ffd700;
+  font-size: 26px;
+  margin-bottom: 12px;
+  color: #ff4d4d;
 }
 
 .reseller p {
-  margin: 15px 0 25px;
-  color: #ffeaa7;
+  margin: 15px auto 30px;
+  color: #ffb3b3;
+  max-width: 520px;
+  line-height: 1.6;
 }
 
 /* ============ OPERATION HOURS ============ */
@@ -151,68 +157,3 @@ footer {
   text-align: center;
   padding: 25px;
   font-size: 13px;
-  color: #ff9999;
-  border-top: 1px solid rgba(255,0,0,0.35);
-}
-
-/* ============ FLOATING WHATSAPP ============ */
-.floating-whatsapp {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 60px;
-  height: 60px;
-  background: #25d366;
-  color: #fff;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 0 25px rgba(37,211,102,0.9);
-  z-index: 999;
-}
-
-/* ============ MODAL ============ */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.modal-box {
-  background: #120000;
-  padding: 30px;
-  border-radius: 18px;
-  width: 90%;
-  max-width: 360px;
-  text-align: center;
-  border: 1px solid rgba(255,0,0,0.4);
-}
-
-.modal-box ul {
-  list-style: none;
-  margin: 20px 0;
-}
-
-.modal-box li {
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.qr-img {
-  width: 220px;
-  margin: 15px 0;
-}
-
-/* ============ MOBILE ============ */
-@media (max-width: 600px) {
-  .banner img {
-    max-height: 220px;
-  }
-}
