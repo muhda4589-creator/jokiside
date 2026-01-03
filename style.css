@@ -1,4 +1,4 @@
-/* ================= RESET ================= */
+/* ============ RESET ============ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,33 +6,30 @@
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: radial-gradient(circle at top, #02000a, #000);
-  color: #e8ecff;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #1a0000, #000);
+  color: #ffd6d6;
 }
 
-/* ================= PROMO BANNER ================= */
+/* ============ STICKY PROMO ============ */
 .promo-banner {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   padding: 12px;
   text-align: center;
-  font-weight: 700;
-  background: linear-gradient(90deg, #ff0033, #007bff);
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff0000, #b30000);
   color: #fff;
-  text-decoration: none;
   z-index: 1000;
-  box-shadow: 0 0 25px rgba(255,0,0,0.8);
+  box-shadow: 0 0 25px rgba(255,0,0,0.9);
 }
 
-/* Push content down */
 .banner {
   margin-top: 50px;
 }
 
-/* ================= BANNER ================= */
+/* ============ BANNER ============ */
 .banner img {
   width: 100%;
   max-height: 320px;
@@ -40,97 +37,86 @@ body {
   display: block;
 }
 
-/* ================= GRID ================= */
+/* ============ GRID ============ */
 .container {
-  max-width: 1150px;
+  max-width: 1100px;
   margin: auto;
   padding: 80px 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 35px;
+  gap: 30px;
 }
 
-/* ================= CARD ================= */
+/* ============ APP CARD ============ */
 .app-card {
-  background: linear-gradient(180deg, rgba(8,8,20,0.95), rgba(0,0,0,0.95));
-  border-radius: 22px;
-  padding: 34px 26px;
+  background: rgba(0,0,0,0.8);
+  border-radius: 20px;
+  padding: 30px;
   text-align: center;
-  border: 1px solid rgba(0,140,255,0.35);
-  box-shadow:
-    0 0 35px rgba(0,140,255,0.35),
-    inset 0 0 25px rgba(255,0,0,0.15);
-  transition: 0.35s ease;
+  border: 1px solid rgba(255,0,0,0.4);
+  box-shadow: 0 0 35px rgba(255,0,0,0.5);
+  transition: 0.3s;
 }
 
 .app-card:hover {
-  transform: translateY(-10px);
-  box-shadow:
-    0 0 55px rgba(255,0,0,0.8),
-    0 0 45px rgba(0,140,255,0.8);
+  transform: translateY(-8px);
+  box-shadow: 0 0 55px rgba(255,0,0,0.9);
 }
 
 .app-card img {
-  width: 115px;
-  margin-bottom: 18px;
-  filter: drop-shadow(0 0 20px rgba(0,140,255,0.9));
+  width: 110px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 15px rgba(255,0,0,0.9));
 }
 
 .app-card h2 {
-  font-size: 22px;
+  color: #ff4d4d;
   margin-bottom: 6px;
-  background: linear-gradient(90deg, #ff0033, #00aaff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .app-card p {
   font-size: 14px;
-  color: #c7d3ff;
-  margin-bottom: 22px;
+  color: #ffb3b3;
+  margin-bottom: 20px;
 }
 
-/* ================= BUTTONS ================= */
+/* ============ BUTTONS ============ */
 .btn {
   display: block;
   width: 100%;
-  padding: 15px;
-  margin: 12px 0;
-  border-radius: 36px;
-  font-weight: 700;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 30px;
+  font-weight: bold;
   text-decoration: none;
-  background: linear-gradient(135deg, #ff0033, #007bff);
+  background: linear-gradient(135deg, #ff0000, #ff4d4d);
   color: #fff;
   border: none;
   cursor: pointer;
-  box-shadow:
-    0 0 25px rgba(255,0,0,0.8),
-    0 0 20px rgba(0,140,255,0.8);
-  transition: 0.3s ease;
+  box-shadow: 0 0 25px rgba(255,0,0,0.9);
 }
 
 .btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .btn.outline {
   background: transparent;
-  color: #00aaff;
-  border: 1px solid rgba(0,140,255,0.8);
+  border: 1px solid #ff4d4d;
+  color: #ff4d4d;
 }
 
-/* ================= PAYMENT ================= */
+/* ============ PAYMENT ============ */
 .payment {
   text-align: center;
-  padding: 90px 20px;
-  background: radial-gradient(circle, rgba(0,140,255,0.15), transparent);
+  padding: 80px 20px;
 }
 
-/* ================= RESELLER (DIFFERENT COLOR) ================= */
+/* ============ RESELLER (DIFFERENT COLOR) ============ */
 .reseller {
   text-align: center;
-  padding: 90px 20px;
-  background: radial-gradient(circle, rgba(255,215,0,0.18), transparent);
+  padding: 80px 20px;
+  background: radial-gradient(circle, rgba(255,215,0,0.15), transparent);
   border-top: 1px solid rgba(255,215,0,0.4);
 }
 
@@ -139,41 +125,37 @@ body {
 }
 
 .reseller p {
-  margin: 16px 0 30px;
+  margin: 15px 0 25px;
   color: #ffeaa7;
 }
 
-/* ================= OPERATION HOURS ================= */
+/* ============ OPERATION HOURS ============ */
 .hours {
   text-align: center;
-  padding: 80px 20px;
-  background: radial-gradient(circle, rgba(0,140,255,0.15), transparent);
+  padding: 70px 20px;
 }
 
 .hours h2 {
-  font-size: 26px;
-  margin-bottom: 12px;
-  background: linear-gradient(90deg, #ff0033, #00aaff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ff4d4d;
+  margin-bottom: 10px;
 }
 
 .hours p {
   font-size: 18px;
-  font-weight: 600;
-  color: #c7d3ff;
+  font-weight: bold;
+  color: #ffb3b3;
 }
 
-/* ================= FOOTER ================= */
+/* ============ FOOTER ============ */
 footer {
   text-align: center;
-  padding: 28px;
+  padding: 25px;
   font-size: 13px;
-  color: #9bb6ff;
-  border-top: 1px solid rgba(0,140,255,0.35);
+  color: #ff9999;
+  border-top: 1px solid rgba(255,0,0,0.35);
 }
 
-/* ================= FLOATING WHATSAPP ================= */
+/* ============ FLOATING WHATSAPP ============ */
 .floating-whatsapp {
   position: fixed;
   right: 20px;
@@ -192,43 +174,43 @@ footer {
   z-index: 999;
 }
 
-/* ================= MODAL ================= */
+/* ============ MODAL ============ */
 .modal {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.85);
   justify-content: center;
   align-items: center;
   z-index: 999;
 }
 
 .modal-box {
-  background: linear-gradient(180deg, #04000a, #000);
-  padding: 32px;
-  border-radius: 20px;
+  background: #120000;
+  padding: 30px;
+  border-radius: 18px;
   width: 90%;
-  max-width: 380px;
+  max-width: 360px;
   text-align: center;
-  border: 1px solid rgba(0,140,255,0.5);
+  border: 1px solid rgba(255,0,0,0.4);
 }
 
 .modal-box ul {
   list-style: none;
-  margin: 22px 0;
+  margin: 20px 0;
 }
 
 .modal-box li {
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .qr-img {
-  width: 230px;
-  margin: 18px 0;
+  width: 220px;
+  margin: 15px 0;
 }
 
-/* ================= MOBILE ================= */
+/* ============ MOBILE ============ */
 @media (max-width: 600px) {
   .banner img {
     max-height: 220px;
