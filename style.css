@@ -7,20 +7,38 @@
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background: radial-gradient(circle at top, #1a0000, #000);
-  color: #ffcccc;
+  background: radial-gradient(circle at top, #02000a, #000);
+  color: #e8ecff;
 }
 
+/* ================= PROMO BANNER ================= */
+.promo-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff0033, #007bff);
+  color: #fff;
+  text-decoration: none;
+  z-index: 1000;
+  box-shadow: 0 0 25px rgba(255,0,0,0.8);
+}
+
+/* Push content down */
+.banner {
+  margin-top: 50px;
+}
 
 /* ================= BANNER ================= */
 .banner img {
   width: 100%;
-  max-height: 360px;
+  max-height: 320px;
   object-fit: cover;
   display: block;
 }
-  
-
 
 /* ================= GRID ================= */
 .container {
@@ -34,38 +52,41 @@ body {
 
 /* ================= CARD ================= */
 .app-card {
-  background: linear-gradient(180deg, rgba(15,0,0,0.95), rgba(0,0,0,0.95));
+  background: linear-gradient(180deg, rgba(8,8,20,0.95), rgba(0,0,0,0.95));
   border-radius: 22px;
   padding: 34px 26px;
   text-align: center;
-  border: 1px solid rgba(255,0,0,0.4);
+  border: 1px solid rgba(0,140,255,0.35);
   box-shadow:
-    0 0 35px rgba(255,0,0,0.35),
-    inset 0 0 20px rgba(255,0,0,0.2);
-  transition: all 0.35s ease;
+    0 0 35px rgba(0,140,255,0.35),
+    inset 0 0 25px rgba(255,0,0,0.15);
+  transition: 0.35s ease;
 }
 
 .app-card:hover {
   transform: translateY(-10px);
   box-shadow:
-    0 0 60px rgba(255,0,0,0.9);
+    0 0 55px rgba(255,0,0,0.8),
+    0 0 45px rgba(0,140,255,0.8);
 }
 
 .app-card img {
   width: 115px;
   margin-bottom: 18px;
-  filter: drop-shadow(0 0 20px rgba(255,0,0,0.9));
+  filter: drop-shadow(0 0 20px rgba(0,140,255,0.9));
 }
 
 .app-card h2 {
   font-size: 22px;
   margin-bottom: 6px;
-  color: #ff4d4d;
+  background: linear-gradient(90deg, #ff0033, #00aaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .app-card p {
   font-size: 14px;
-  color: #ffb3b3;
+  color: #c7d3ff;
   margin-bottom: 22px;
 }
 
@@ -78,77 +99,69 @@ body {
   border-radius: 36px;
   font-weight: 700;
   text-decoration: none;
-  background: linear-gradient(135deg, #ff0000, #ff4d4d);
+  background: linear-gradient(135deg, #ff0033, #007bff);
   color: #fff;
   border: none;
   cursor: pointer;
-  letter-spacing: 0.5px;
-  box-shadow: 0 0 25px rgba(255,0,0,0.8);
-  transition: all 0.3s ease;
+  box-shadow:
+    0 0 25px rgba(255,0,0,0.8),
+    0 0 20px rgba(0,140,255,0.8);
+  transition: 0.3s ease;
 }
 
 .btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 45px rgba(255,0,0,1);
 }
 
 .btn.outline {
   background: transparent;
-  color: #ff4d4d;
-  border: 1px solid #ff4d4d;
+  color: #00aaff;
+  border: 1px solid rgba(0,140,255,0.8);
 }
 
 /* ================= PAYMENT ================= */
 .payment {
   text-align: center;
   padding: 90px 20px;
-  background: radial-gradient(circle, rgba(255,0,0,0.15), transparent);
+  background: radial-gradient(circle, rgba(0,140,255,0.15), transparent);
 }
 
-.payment h2 {
-  margin-bottom: 30px;
-  color: #ff6666;
-}
-
-/* ================= RESELLER ================= */
+/* ================= RESELLER (DIFFERENT COLOR) ================= */
 .reseller {
   text-align: center;
   padding: 90px 20px;
-  background: radial-gradient(circle, rgba(255,0,0,0.18), transparent);
-  border-top: 1px solid rgba(255,0,0,0.3);
+  background: radial-gradient(circle, rgba(255,215,0,0.18), transparent);
+  border-top: 1px solid rgba(255,215,0,0.4);
 }
 
 .reseller h2 {
-  color: #ff4d4d;
-  margin-bottom: 10px;
+  color: #ffd700;
 }
 
 .reseller p {
   margin: 16px 0 30px;
-  color: #ffb3b3;
+  color: #ffeaa7;
 }
 
 /* ================= OPERATION HOURS ================= */
 .hours {
   text-align: center;
   padding: 80px 20px;
-  background: #000;
-  border-top: 1px solid rgba(255,0,0,0.35);
-  border-bottom: 1px solid rgba(255,0,0,0.35);
+  background: radial-gradient(circle, rgba(0,140,255,0.15), transparent);
 }
 
 .hours h2 {
   font-size: 26px;
   margin-bottom: 12px;
-  color: #ff4d4d;
+  background: linear-gradient(90deg, #ff0033, #00aaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hours p {
   font-size: 18px;
-  font-weight: bold;
-  color: #ffcccc;
-  letter-spacing: 1px;
-  text-shadow: 0 0 10px rgba(255,0,0,0.8);
+  font-weight: 600;
+  color: #c7d3ff;
 }
 
 /* ================= FOOTER ================= */
@@ -156,8 +169,27 @@ footer {
   text-align: center;
   padding: 28px;
   font-size: 13px;
-  color: #ff9999;
-  border-top: 1px solid rgba(255,0,0,0.35);
+  color: #9bb6ff;
+  border-top: 1px solid rgba(0,140,255,0.35);
+}
+
+/* ================= FLOATING WHATSAPP ================= */
+.floating-whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 25px rgba(37,211,102,0.9);
+  z-index: 999;
 }
 
 /* ================= MODAL ================= */
@@ -172,14 +204,13 @@ footer {
 }
 
 .modal-box {
-  background: #120000;
+  background: linear-gradient(180deg, #04000a, #000);
   padding: 32px;
   border-radius: 20px;
   width: 90%;
   max-width: 380px;
   text-align: center;
-  border: 1px solid rgba(255,0,0,0.6);
-  box-shadow: 0 0 40px rgba(255,0,0,0.9);
+  border: 1px solid rgba(0,140,255,0.5);
 }
 
 .modal-box ul {
@@ -189,36 +220,12 @@ footer {
 
 .modal-box li {
   padding: 12px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
 .qr-img {
   width: 230px;
   margin: 18px 0;
-}
-
-/* ================= FLOATING WHATSAPP ================= */
-.floating-whatsapp {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 60px;
-  height: 60px;
-  background: #25d366;
-  color: #fff;
-  font-size: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  box-shadow: 0 0 30px rgba(37,211,102,0.9);
-  z-index: 1000;
-  transition: transform 0.3s ease;
-}
-
-.floating-whatsapp:hover {
-  transform: scale(1.1);
 }
 
 /* ================= MOBILE ================= */
@@ -227,4 +234,3 @@ footer {
     max-height: 220px;
   }
 }
-
