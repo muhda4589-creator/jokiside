@@ -81,6 +81,7 @@ body {
   border: none;
   cursor: pointer;
   box-shadow: 0 0 25px rgba(255,0,0,0.8);
+  transition: 0.25s;
 }
 
 .btn:hover {
@@ -91,6 +92,7 @@ body {
   background: transparent;
   border: 1px solid #ff4d4d;
   color: #ff4d4d;
+  box-shadow: none;
 }
 
 /* ============ PAYMENT ============ */
@@ -104,40 +106,6 @@ body {
   margin: 18px auto;
   height: 60px;
   font-size: 18px;
-}
-
-/* ============ HELP ============ */
-.help {
-  text-align: center;
-  padding: 70px 20px;
-}
-
-.help h2 {
-  margin-bottom: 25px;
-  color: #ff4d4d;
-}
-
-.help-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 55px;
-  max-width: 360px;
-  margin: 15px auto;
-  border-radius: 40px;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-}
-
-.help-btn.whatsapp {
-  background: #25d366;
-  box-shadow: 0 0 25px rgba(37,211,102,0.7);
-}
-
-.help-btn.telegram {
-  background: #0088cc;
-  box-shadow: 0 0 25px rgba(0,136,204,0.7);
 }
 
 /* ============ RESELLER (BLACK + PREMIUM) ============ */
@@ -200,6 +168,32 @@ footer {
   border-top: 1px solid rgba(255,0,0,0.35);
 }
 
+/* ============ FLOATING WHATSAPP (PREMIUM) ============ */
+.floating-whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, #25d366, #1ebe5d);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 0 0 30px rgba(37,211,102,0.9);
+  z-index: 1000;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.05);
+}
+
+.floating-whatsapp .wa-icon {
+  font-size: 22px;
+}
+
 /* ============ MODAL ============ */
 .modal {
   display: none;
@@ -240,5 +234,13 @@ footer {
 @media (max-width: 600px) {
   .banner img {
     max-height: 180px;
+  }
+
+  .floating-whatsapp {
+    padding: 14px;
+  }
+
+  .floating-whatsapp .wa-text {
+    display: none;
   }
 }
